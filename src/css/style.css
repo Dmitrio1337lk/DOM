@@ -1,0 +1,58 @@
+body {
+    background-color: rgb(11, 84, 11);
+    text-transform: uppercase;
+    font-family: cursive;
+}
+
+.title{
+    font-weight: 600;
+    color: white;
+    text-shadow: 2px 2px #000000, -2px -2px #000000, -2px 2px #000000, 2px -2px #000000;
+    text-align: center;   
+}
+
+.hubGame{
+    display: flex;
+    flex-wrap: wrap;
+    width:400px;
+    margin: auto;
+    text-align: center;
+    align-items: flex-end;
+}
+
+.scoreGame, .timeGame{
+    width: 50%;
+    text-align: center;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.scoreGame p, .timeGame p{
+    color: white;
+    text-shadow: 1px 1px #000000, -1px -1px #000000, -1px 1px #000000, 1px -1px #000000;
+}
+
+.field{
+    width: 400px;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.square{
+    margin: 10px;
+    width: calc(100px - 20px);
+    height: calc(100px - 20px);
+    background-color: rgb(22, 146, 26);
+    border: solid 2px black;
+    box-sizing: border-box;
+    border-radius: 15px;
+    box-shadow: #00000054 5px 5px;
+}
+
+.goblin{
+    background-image: url(../pic/goblin.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 80%;
+}
