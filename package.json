@@ -238,10 +238,7 @@
     "wrappy": "^1.0.2",
     "yallist": "^4.0.0"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Dmitrio1337lk/DOM.git"
-  },
+  "repository": "git+https://github.com/Dmitrio1337lk/DOM.git",
   "bugs": {
     "url": "https://github.com/Dmitrio1337lk/DOM/issues"
   },

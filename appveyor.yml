@@ -1,10 +1,27 @@
-configuration: Release
+image: Ubuntu1804 # образ для сборки
 
-# restore NuGet packages before running MSBuild 
-before build:
-  - nuget restore
+stack: node 12 # окружение
 
-# package Web Application project for Web Deploy
-build:
-  verbosity: minimal
-  publish_wap: true
+branches:
+  only:
+    - master # ветка git
+
+cache: node_modules # кеширование
+
+install:
+  - yarn install # команда установки зависимостей
+
+build: off
+
+test_script:
+  - yarn run lint && yarn test # скрипт сборки
+
+build_script:
+  - yarn run build   # команда сборки
+
+eploy_script:  # скрипт развёртывания
+  - git config --global credential.helper store
+  - git config --global user.name AppVeyor
+  - git config --global user.email ci@appveyor.com
+  - echo "https://$GITHUB_TOKEN:x-oauth-basic@github.com" > "$HOME/.git-credentials"
+  - npx push-dir --dir=dist --branch=gh-pages --force --verbose
