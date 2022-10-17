@@ -18,24 +18,19 @@ function randomSquare() {
 squares.forEach((square) => {
   square.addEventListener('mousedown', () => {
     if (square.id === hitPosition) {
-      let resultate = result += 1;
+      const resultate = result += 1;
       score.textContent = resultate;
       hitPosition = null;
     }
   });
 });
 
-function moveGoblin() {
-  let timerId = null;
-  timerId = setInterval(randomSquare, 500);
-}
-
-moveGoblin();
+setInterval(randomSquare, 500);
 
 function countDown() {
   currentTime -= 1;
   timeLeft.textContent = currentTime;
-  if( currentTime === 0 ) {
+  if (currentTime === 0) {
     clearInterval(countDownTimerId);
     alert('Время вышло! Вы молодец!');
     location = '';
