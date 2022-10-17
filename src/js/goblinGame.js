@@ -2,7 +2,7 @@ const squares = document.querySelectorAll('.square');
 const timeLeft = document.querySelector('#timeLeft');
 const score = document.querySelector('#score');
 
-let result = 0;
+const result = 0;
 let hitPosition;
 let currentTime = 90;
 
