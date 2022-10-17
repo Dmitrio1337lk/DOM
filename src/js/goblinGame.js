@@ -10,11 +10,11 @@ function randomSquare() {
 
   squares.forEach(square => {
 
-  square.classList.remove('goblin');
+    square.classList.remove('goblin');
 
-})
+  })
 
-let randomBox = squares[Math.floor(Math.random() * 16)];
+  let randomBox = squares[Math.floor(Math.random() * 16)];
 
   randomBox.classList.add('goblin');
 
@@ -24,22 +24,20 @@ let randomBox = squares[Math.floor(Math.random() * 16)];
 
 squares.forEach(square => {
   
-    square.addEventListener('mousedown', () => {
+  square.addEventListener('mousedown', () => {
   
-    if (square.id == hitPosition) {
-            result;
-            console.log(result++);
-            score.textContent = result;
-            hitPosition = null;
-        }
+    if (square.id === hitPosition) {
+      result;
+      console.log(result++);
+      score.textContent = result;
+      hitPosition = null;
+    }
 
-    });
+  });
 
 })
 
 function moveGoblin() {
-
-  let timerId = null;
 
   timerId = setInterval(randomSquare, 500);
 
@@ -47,10 +45,11 @@ function moveGoblin() {
 
 moveGoblin()
 
+let countDownTimerId = setInterval(countDown, 1000);
+
 function countDown() {
   
   currentTime--;
-  
   timeLeft.textContent = currentTime;
   
   if ( currentTime === 0 ) {
@@ -59,6 +58,4 @@ function countDown() {
     location = '';
   }
 
-}
-
-let countDownTimerId = setInterval(countDown, 1000)
+};
