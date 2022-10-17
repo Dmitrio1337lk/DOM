@@ -33,8 +33,7 @@ function countDown() {
   if (currentTime === 0) {
     clearInterval(countDownTimerId);
     alert('Время вышло! Вы молодец!');
-    location = '';
   }
-};
+}
 
 const countDownTimerId = setInterval(countDown, 1000);
