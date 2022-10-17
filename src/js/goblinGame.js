@@ -10,7 +10,7 @@ function randomSquare() {
   squares.forEach((square) => {
     square.classList.remove('goblin');
   });
-  let boxRandom = squares[Math.floor(Math.random() * 16)];
+  const boxRandom = squares[Math.floor(Math.random() * 16)];
   boxRandom.classList.add('goblin');
   hitPosition = boxRandom.id;
 }
@@ -18,27 +18,28 @@ function randomSquare() {
 squares.forEach((square) => {
   square.addEventListener('mousedown', () => {
     if (square.id === hitPosition) {
-      score.textContent = result++;
+      score.textContent = result+=1;
       hitPosition = null;
     };
   });
-})
+});
 
 function moveGoblin() {
+  let timerId = null;
   timerId = setInterval(randomSquare, 500);
 }
 
 moveGoblin();
 
-let countDownTimerId = setInterval(countDown, 1000);
-
 function countDown() {
-  currentTime--;
-  timeLeft.textContent = currentTime;
+  currentTime-=1;
+  timeLeft.textContent=currentTime;
   
-  if ( currentTime === 0 ) {
+  if( currentTime === 0 ) {
     clearInterval(countDownTimerId);
     alert('Время вышло! Вы молодец!');
     location = '';
   }
 };
+
+const countDownTimerId = setInterval(countDown, 1000);
