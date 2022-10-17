@@ -7,22 +7,20 @@ let hitPosition;
 let currentTime = 90;
 
 function randomSquare() {
-  squares.forEach(square => {
+  squares.forEach((square) => {
     square.classList.remove('goblin');
-  })
-  let randomBox = squares[Math.floor(Math.random() * 16)];
-  randomBox.classList.add('goblin');
-  hitPosition = randomBox.id;
+  });
+  let boxRandom = squares[Math.floor(Math.random() * 16)];
+  boxRandom.classList.add('goblin');
+  hitPosition = boxRandom.id;
 }
 
-squares.forEach(square => {
+squares.forEach((square) => {
   square.addEventListener('mousedown', () => {
     if (square.id === hitPosition) {
-      result;
-      console.log(result++);
-      score.textContent = result;
+      score.textContent = result++;
       hitPosition = null;
-    }
+    };
   });
 })
 
