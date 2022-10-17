@@ -18,7 +18,7 @@ function randomSquare() {
 squares.forEach((square) => {
   square.addEventListener('mousedown', () => {
     if (square.id === hitPosition) {
-      score.textContent = result+=1;
+      score.textContent = result += 1;
       hitPosition = null;
     };
   });
@@ -32,8 +32,8 @@ function moveGoblin() {
 moveGoblin();
 
 function countDown() {
-  currentTime-=1;
-  timeLeft.textContent=currentTime;
+  currentTime -= 1;
+  timeLeft.textContent = currentTime;
   
   if( currentTime === 0 ) {
     clearInterval(countDownTimerId);
