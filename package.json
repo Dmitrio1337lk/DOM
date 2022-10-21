@@ -241,6 +241,7 @@
     "vary": "^1.1.2",
     "watchr": "^2.6.0",
     "webpack-build": "^1.0.1",
+    "webpack-merge": "^5.8.0",
     "websocket-driver": "^0.7.3",
     "websocket-extensions": "^0.1.4",
     "which": "^2.0.2",
