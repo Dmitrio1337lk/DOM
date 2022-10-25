@@ -1,7 +1,8 @@
 const path = require('path');
 const webpack = require('webpack');
 const { merge } = require('webpack-merge');
-const common = require('./webpack.common');
+// const common = require('./webpack.common');
+const common = require('./webpack.config');
 
 module.exports = merge(common, {
   // Set the mode to development or production
